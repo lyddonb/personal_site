@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Beau Lyddon</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width">
+
+    <meta name="keywords" content="beau lyddon, lyddon, software, cloud, mentoring, performance, scalability, distributed systems, engineering, leadership, startup, Google Cloud Platform, GCP, Amazon Web Services, AWS, Boulder, Colorado, platform, services, web, architecture" />
+    <meta name="description" content="Somebody that likes to build things."/>
+
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon" />
+    <link href="static/css/styles.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+
+  <body data-spy="scroll" data-offset="112" data-target=".navbar">
+    {%- block body -%}
+
+    <div class="container">
+      <div class="sidebar">
+        <header>
+          <div>
+            <img class="avatar" src="static/img/beau.png" alt="beau" />
+          </div>
+          <div class="details">
+            <div>
+              <h1 class="heading text-3xl">Beau Lyddon</h1>
+            </div>
+            <div class="social">
+              <a href="https://twitter.com/lyddonb">
+                <i data-feather="twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/beau-lyddon">
+                <i data-feather="linkedin"></i>
+              </a>
+              <a href="https://github.com/lyddonb">
+                <i data-feather="github"></i>
+              </a>
+              <a href="mailto:lyddonb@gmail.com">
+                <i data-feather="mail"></i>
+              </a>
+            </div>
+          </div>
+        </header>
+        <hr class="divider" />
+        <nav id="main-menu"
+             class="main-menu"
+             role="navigation"
+             aria-expanded="false"
+             aria-label="Main menu"
+          >
+          <div class="main-menu-close">
+            <a href="#main-menu-toggle"
+              class="menu-close"
+              role="button"
+              id="main-menu-close"
+              aria-expanded="false"
+              aira-controls="main-menu"
+              aria-label="Close main menu">
+              <span class="sr-only">Close main menu</span>
+              <i data-feather="x-square" aria-hidden="true"></i>
+            </a>
+          </div>
+             
+          <ul class="menu">
+            {% for mi in menu %}
+            <li>
+              {% if mi[3] %}
+                {{ mi[2]|safe }}
+              {% else %}
+                <a href="{{ mi[0] }}" id="{{ mi[1] }}">{{ mi[2]|safe }}</a>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+
+        <a href="#main-menu"
+           class="menu-toggle"
+           role="button"
+           id="main-menu-button"
+           aria-expanded="false"
+           aria-controls="main-menu"
+           aria-label="Open main menu">
+          <span class="sr-only">Open Main Menu</span>
+          <i data-feather="menu" aria-hidden="true"></i>
+        </a>
+
+        <hr class="divider" />
+
+        <footer>
+          <div>© Copyright 2019 ©</div>
+          <div>Beau Lyddon</div>
+          <div>All Rights Reserved</div>
+        </footer>
+
+      </div>
+
+      <div class="content">
+        {%- block content -%}{%- endblock -%}
+      </div>
+
+      {%- block scripts -%}{%- endblock -%}
+
+    </div>
+
+    {%- endblock -%}
+
+    <footer class="pagefooter">
+      <div>© Copyright 2019 ©</div>
+      <div>Beau Lyddon | All Rights Reserved</div>
+    </footer>
+
+ 
+    <script>feather.replace();</script>
+  </body>
+</html>

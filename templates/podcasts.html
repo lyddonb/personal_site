@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{%- block content -%}
+
+<div class="colflexcontainer">
+  <div>
+    <h1 class="mt-0 heading">Podcasts</h1>
+  </div>
+  <div class="podcasts">
+    <div>
+      <a class="title" href="https://www.tiedtomachines.com/">
+        <h2>{{ ttm.title }}</h2>
+      </a>
+    </div>
+    <div class="details">
+      <iframe height="350px" width="100%" scrolling="no" frameborder="0"'style="width:100%;border:0;overflow:hidden;" src="https://app.stitcher.com/splayer/f/332090"></iframe>
+      <div class="desc colflexcontainer">
+        <p class="italic">{{ ttm.description }}</p>
+        <div class="pclinks">
+          <a href="https://itunes.apple.com/us/podcast/tied-to-machines/id1443440191?mt=2">
+            <img src="static/img/US_UK_Apple_Podcasts_Listen_Badge_RGB.svg" 
+              alt="apple podcasts" />
+          </a>
+          <a href="https://www.stitcher.com/s?fid=332090&refid=stpr">
+            <img src="static/img/Stitcher_Listen_Badge_Color_Light_BG.png" 
+              alt="apple podcasts" />
+          </a>
+        </div>
+        <h4>Last {{ ttm.items|length }} Episodes</h4>
+        <ul>
+          {% for pc in ttm.items %}
+          <li class="episode">
+            <div>
+              <a href="{{ pc.enclosure_url }}">{{ pc.title }}</a>
+            </div>
+            <div>
+              {% if pc.date_time %}
+                {{ pc.date_time.strftime('%Y-%m-%d') }}
+              {% endif %}
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{%- endblock -%}

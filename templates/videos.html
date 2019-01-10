@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{%- block content -%}
+
+<div class="colflexcontainer">
+  <div>
+    <h1 class="mt-0 heading">Videos</h1>
+  </div>
+  <div class="videos">
+    <ul class="list-unstyled">
+      {% for video in videos %}
+      <li class="video">
+        <a href="{{ video.url }}">
+          <img class="thumbnail" src="/static/img/video/thumbs/{{ video.photo }}" 
+            alt="{{ video.photo_alt }}" />
+        </a>
+        <div class="details colflexcontainer">
+          <h3 class="mt-0 mb-1">
+            <a href="{{ video.url }}">
+              {{ video.location }}
+            </a>
+          </h3>
+          <h4>
+              {{ video.title }}
+          </h4>
+          {{ video.snippet|safe }}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</div>
+
+{%- endblock -%}

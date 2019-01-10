@@ -1,0 +1,78 @@
+Beau Lyddon
+https://github.com/lyddonb/
+lyddonb@gmail.com
+https://github.com/beaulyddon-wf
+    
+
+I am an experienced software engineer, architect, and development manager. I believe in shipping solutions built with good design fundamentals early to accelerate learning and reduce engineering time. I have experience in designing maintainable service-based software platforms. I believe understanding problems from the business and customer perspective is crucial to developing high-value solutions for consumers.
+
+
+Experience ------------------------------------------------------------------
+CO-FOUNDER AND MANAGING PARTNER, Real Kinetic, 2017 to Present
+Mentored clients to help enable their technical teams to grow and build high-quality software. We used a holistic, team-based approach to accelerate delivery, but in a way that makes execution more sustainable long-term. This includes working through deep technical problems—such as cloud architecture, performance, and scalability—as well as organizational processes and leadership mentoring.
+
+
+|Projects|
+We had multiple projects focused on helping clients develop new or migrate existing systems to cloud environments. We provided guidance, training, and hands on support of many cloud based services.
+* Runtime systems: Kubernetes, Cloud Functions, and Google App Engine
+* Data storage: RDS, CloudSQL, CloudDatastore, BigQuery, S3
+* Data processing: Dataflow, Cloud Pub/Sub, SQS, Kinesis
+* Architectural guidance focused on fault tolerance and scalability 
+* Multi-tenancy support and the impact on the infrastructure as well as services such as authentication and authorization.
+
+
+These engagements also involved a transition to a DevOps culture. Focusing on continuous delivery and solving infrastructure needs via products and code verse manual processes.
+* Help teams understand their security and compliance needs
+* Automating processes into their CI/CD pipeline
+* Provide support of zero downtime deploys
+* Data Pipeline for observability tools
+
+
+SENIOR DIRECTOR OF ARCHITECTURE, Workiva, 2011 to 2017
+Lead a group of teams to develop Workiva’s collaboration and data platform.
+Collaborate with teams to help architect, engineer and deliver systems and services.
+Work with Development and Product Managers to drive requirements and set goals via OKRs.
+
+
+|Projects|
+Microservice Based Architecture
+Lead a group of architects and engineers to design and build a new microservice based platform to support Workiva’s next generation of products and services. Main area of focus has been the Data Platform.
+
+
+Systems include:
+* Platform wide message bus including pub/sub support
+* Durable event stream built on top of AWS Kinesis
+* Table based calculation engine
+* Graph/Relationship database with ACID Properties 
+* Platform wide code and integration tracing system
+
+
+Calculation Service (https://www.google.com/patents/US20150026230)
+Created a distributed, graph based process for calculating user created formulas. Developed with Python on top of Google App Engine. Leverages GAE task queues, memcache and datastore. Algorithm is built around idempotent tasks, message passing and an adjacency list for tracking status. Built an async workflow library for managing the process on task queues (https://github.com/workiva/furious). Also created a profiling tool for visualizing task based processes (https://github.com/lyddonb/trajectory) and a library for triggering latency spikes and failure in tasks.
+
+
+Prior Experience
+SOFTWARE ENGINEER, Quality Attributes Software (QAS), 2009 to 2011
+SOFTWARE ENGINEER/ARCHITECT, EFCO Corp, 2004 to 2009
+SOFTWARE DEVELOPER / FREELANCER, Self Employed, 2000 to 2009
+
+
+Education ------------------------------------------------------------------
+IOWA STATE UNIVERSITY
+Bachelor of Science, Management Information Systems, 2003
+
+
+Skills ---------------------------------------------------------------------
+Languages
+Experienced: Python, Elm, Go, Javascript, C#, CSS, HTML, Purescript, Ruby, PHP
+Experimented: Rust, C, C++, Clojure, ClojureScipt, Haskell, Erlang, Dart, Idris
+
+
+Systems
+Experienced: Google Cloud Platform, AWS
+Experimented: StatsD, Graphite, RabbitMQ, Kafka
+
+
+Storage
+Experienced: Google Datastore, RDS, BigQuery, MySQL, SQL Server, Memcache, Redis, Google File Storage
+Experimented: Postgres, MongoDB, Cassandra, Riak, Google Cloud Spanner

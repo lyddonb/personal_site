@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{%- block content -%}
+<div class="home">
+  <div class="main">
+    <div class="section">
+      <h1 class="heading">Welcome</h1>
+      <p>
+        I love to learn, teach and build. Previously I have been a software engineer, architect, development manager, director, and managing partner. I love to work with a team to solve problems and learn many things as we go along.
+      </p>
+      <p>
+        I also write, speak and record a podcast. If you're interested in having me present at your event please feel free to reach out by any of the methods below. If you'd like to be a guest on our podcast please contact me as well.
+      </p>
+      <div>Twitter: <a href="https://twitter.com/lyddonb">@lyddonb</a></div>
+      <div>LinkedIn: <a href="https://www.linkedin.com/in/beau-lyddon">beau-lyddon</a></div>
+      <div>Email: <a href="mailto:lyddonb@gmail.com">lyddonb@gmail.com</a></div>
+    </div>
+    <div>
+      <h1 class="heading">Most Recent Activity</h1>
+      <ul class="recentitems">
+        {% for ri in recent_items %}
+        <li>
+          <div class="icon">
+            <i data-feather="{{ ri.kind_icon }}"></i>
+          </div>
+          <div class="colflexcontainer info">
+            <a href="{{ ri.url }}"><span>{{ ri.kind }}</span>: {{ ri.title }}</a>
+            <div>Published: {{ ri.publish_date.strftime('%Y-%m-%d') }}</div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="colflexcontainer widgets">
+    <div class="podcastwidget widget">
+      <h4>Listen to the latest episode of my podcast:</h4> 
+      <div class="header">
+        <a href="https://www.tiedtomachines.com">
+          <h3>Tied to Machines</h3>
+        </a>
+        <a href="https://itunes.apple.com/us/podcast/tied-to-machines/id1443440191?mt=2">
+          <img class="itunes" src="static/img/US_UK_Apple_Podcasts_Listen_Badge_RGB.svg" 
+            alt="apple podcasts" />
+        </a>
+      </div>
+      <div>
+        <iframe height="350px" width="100%" scrolling="no" frameborder="0"'style="width:100%;border:0;overflow:hidden;" src="https://app.stitcher.com/splayer/f/332090"></iframe>
+      </div>
+    </div>
+    <div class="youtubewidget widget">
+      <h4>My favorite presentation:</h4>
+      <a href="https://www.youtube.com/watch?v=xy3w2hGijhE">
+        <h3>What is Happening?: Attempting to Understand Our Systems</h3>
+      </a>
+      <iframe width="100%" src="https://www.youtube.com/embed/xy3w2hGijhE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="writingwidget widget">
+      <h4>My favorite blog post:</h4>
+      <a href="https://blog.realkinetic.com/stop-wasting-your-beer-money-12c3fe5e4d54">
+        <h3>Stop Wasting Your Beer Money</h3>
+      </a>
+      <div>
+        <img width="100%" src="static/img/writing/rkposts/beermoney.jpeg" alt="beermoney" />
+        <p class="italic">"Why are engineers so bad at paying other engineers for their work? If we can afford spending $50 on pizza and beer for a late night of coding, then we can afford spending $50 a month for a logging service. Yet something is keeping us from just paying for that service. I believe it starts with us consistently undervaluing our own time, which leads to us undervaluing other engineers’ time."</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- endblock -%}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{%- block content -%}
+
+<div class="colflexcontainer">
+  <div>
+    <h1 class="mt-0 heading">Writing</h1>
+  </div>
+  <div class="rkwriting">
+    <h2>From Real Kinetic</h2>
+    <a href="https://medium.com/@beau.lyddon/latest">Click here for my full Real Kinetic profile and history on Medium</a>
+    <div class="posts">
+      <div class="my">
+        <h3>My Posts</h3>
+        <ul>
+          {% for rkpost in rkposts %}
+          <li>
+            <div class="imgholder">
+              <img src="static/img/writing/rkposts/{{ rkpost["img"] }}" 
+                  alt="{{ rkpost["alt"] }}" />
+            </div>
+            <div class="details">
+              <a class="text-xl" href="{{ rkpost["link"] }}">
+                {{ rkpost["title"] }}
+              </a>
+              <p>{{ rkpost["snippet"] }}</p>
+              <a class="" href="{{ rkpost["link"] }}">
+                Continue Reading ...
+              </a>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="newsletter">
+        <h3>Most Recent Newsletters</h3>
+        <div class="post">
+          {% for post in posts %}
+          <div>
+            <a href="{{ post["link"] }}">{{ post["title"] }}</a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{%- endblock -%}
