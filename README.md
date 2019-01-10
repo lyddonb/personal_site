@@ -48,11 +48,11 @@ That's it. My site up and running. I have no clue why you would want to run my s
 Material for the site and potential future features.
 
 ### Design
-https://css-tricks.com
-https://feathericons.com/
-https://tailwindcss.com
-https://citizennet.github.io
+- https://css-tricks.com
+- https://feathericons.com/
+- https://tailwindcss.com
+- https://citizennet.github.io
 
 ### Blog
-https://github.com/gouthambs/Flask-Blogging
-http://charlesleifer.com/blog/how-to-make-a-flask-blog-in-one-hour-or-less/
+- https://github.com/gouthambs/Flask-Blogging
+- http://charlesleifer.com/blog/how-to-make-a-flask-blog-in-one-hour-or-less/
