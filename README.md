@@ -1,7 +1,7 @@
 Personal Site
 =============
 
-My personal website.
+Code for my [personal website](https://www.beaulyddon.com).
 
 This is a basic Google App Engine, Python 3 site. At the moment there are no dependencies on other services as this is a static site that pulls some content (podcast, old blog posts) from 3rd party services.
 
