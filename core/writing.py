@@ -1,4 +1,14 @@
+from datetime import datetime
+from time import mktime
+
 import feedparser
+
+from core import medium
+
+
+IMG_BASE = "https://cdn-images-1.medium.com/max/800/"
+PERSONAL = "lyddonb"
+RK = "beau.lyddon"
 
 
 try:
@@ -7,6 +17,25 @@ try:
         ssl._create_default_https_context = ssl._create_unverified_context
 except:
     pass
+
+
+class Post():
+    """ This is an object to hold the basic data pulled from a medium feed.
+    Ideally it will be filled by the JSON feed which has all the data we need.
+    If we fallback to RSS we lose some data like the image and subtitle.
+    """
+
+    def __init__(self, id, title, first_published, last_published, word_count,
+                 reading_time, subtitle, img_id, tags):
+        self.id = id
+        self.title = title
+        self.first_published = first_published
+        self.last_published = last_published
+        self.word_count = word_count
+        self.reading_time = reading_time
+        self.subtitle = subtitle
+        self.img_id = img_id
+        self.tags = tags
 
 
 RK_POSTS = [
@@ -43,11 +72,83 @@ RK_POSTS = [
 ]
 
 
+def get_medium_latest():
+    feed = medium.get_feed(PERSONAL)
+
+    if not feed:
+        return _make_posts_from_xml(get_medium_posts())
+
+    parsed = medium.parse_feed(feed)
+
+    if not parsed:
+        return _make_posts_from_xml(get_medium_posts())
+
+    return _make_posts_from_json(parsed)
+
+
 def get_rk_posts():
     return RK_POSTS
 
 
 def get_medium_posts():
-    url = "https://medium.com/feed/@{}".format("beau.lyddon")
+    return _get_medium_posts(PERSONAL)
+
+
+def get_old_medium_posts():
+    return _get_medium_posts(RK)
+
+
+def _get_medium_posts(user):
+    url = "https://medium.com/feed/@{}".format(user)
     f = feedparser.parse(url)
     return f.entries
+
+
+def _from_timestamp(pub):
+    return datetime.fromtimestamp(pub / 1000) if pub else None
+
+
+def _make_posts_from_xml(feed):
+    result = []
+    for item in feed:
+        result.append(Post(
+            item.id,
+            item.title,
+            datetime.fromtimestamp(mktime(item.published_parsed)),
+            None,
+            -1,
+            -1,
+            "",
+            None,
+            [t["term"] for t in item.tags]
+        ))
+
+    return result
+
+
+def _make_posts_from_json(feed):
+    posts = feed.get("payload", {}).get("references", {}).get("Post", {})
+
+    result = []
+    for pid, post in posts.items():
+        virtuals = post.get("virtuals", {})
+        tags = virtuals.get("tags", [])
+        first_pub = post["firstPublishedAt"]
+        latest_pub = post["latestPublishedAt"]
+
+        result.append(Post(
+            pid,
+            post.get("title"),
+            _from_timestamp(first_pub),
+            _from_timestamp(latest_pub),
+            virtuals.get("wordCount", -1),
+            virtuals.get("readingTime", -1),
+            virtuals.get("subtitle", ""),
+            virtuals.get("previewImage", {}).get("imageId"),
+            [t["name"] for t in tags if t]
+        ))
+
+    return result
+
+
+

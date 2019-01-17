@@ -267,6 +267,37 @@ a:hover {
   height: 30px;
 }
 
+.writing {
+  margin-bottom: 1.5rem;
+}
+
+.writing .posts {
+  margin: 0 -.5rem;
+}
+
+.writing .post {
+  display: inline-block;
+  padding: .5rem;
+}
+
+.writing .post img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.writing .post h3 {
+  margin: .5rem 0;
+}
+
+.writing .post .details {
+  font-size: .9rem;
+}
+
+.writing .post .details .sub {
+  margin-bottom: .5rem;
+}
+
 .rkwriting {
   background-color: #f8f8f8;
   padding: 1rem;
@@ -288,7 +319,7 @@ a:hover {
   margin: .2rem 0;
 }
 
-.rkwriting h2 {
+.rkwriting h2, .writing h2 {
   margin: 0;
 }
 
@@ -463,6 +494,19 @@ a:hover {
 
   .about .section .projects {
     display: flex;
+  }
+}
+
+@media (min-width: 426px) {
+  .writing .posts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .writing .post {
+    display: inline-block;
+    width: calc(50% - 1rem);
   }
 
 }

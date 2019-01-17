@@ -5,7 +5,7 @@ from flask import render_template
 from core import podcasts as pc
 from core.feed import recent_items
 from core.videos import get_videos
-from core.writing import get_medium_posts
+from core.writing import get_medium_latest
 from core.writing import get_rk_posts
 
 
@@ -55,7 +55,7 @@ def contact():
 
 @app.route('/writing', methods=['GET'])
 def writing():
-    return _simple('writing.html', posts=get_medium_posts(),
+    return _simple('writing.html', posts=get_medium_latest()[:6],
                    rkposts=get_rk_posts())
 
 

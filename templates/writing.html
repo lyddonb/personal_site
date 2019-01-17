@@ -6,6 +6,30 @@
   <div>
     <h1 class="mt-0 heading">Writing</h1>
   </div>
+  <div class="writing">
+    <h2>Personal Blog</h2>
+    <a href="https://medium.com/@lyddonb/latest">Click here for my full profile and history on Medium</a>
+    <div class="posts">
+      {% for post in posts %}
+      <div class="post">
+        <a href="https://medium.com/p/{{ post.id }}">
+          {% if post.img_id %}
+          <img src="https://cdn-images-1.medium.com/fit/442/248/{{ post.img_id }}" />
+          {% endif %}
+        </a>
+        <div>
+          <a href="https://medium.com/p/{{ post.id }}">
+            <h3>{{ post.title }}</h3>
+          </a>
+          <div class="details">
+            <div class="sub">{{ post.subtitle }}</div>
+            <div class="italic">{{ post.first_published.strftime('%Y-%m-%d') }}</div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
   <div class="rkwriting">
     <h2>From Real Kinetic</h2>
     <a href="https://medium.com/@beau.lyddon/latest">Click here for my full Real Kinetic profile and history on Medium</a>
@@ -31,16 +55,6 @@
           </li>
           {% endfor %}
         </ul>
-      </div>
-      <div class="newsletter">
-        <h3>Most Recent Newsletters</h3>
-        <div class="post">
-          {% for post in posts %}
-          <div>
-            <a href="{{ post["link"] }}">{{ post["title"] }}</a>
-          </div>
-          {% endfor %}
-        </div>
       </div>
     </div>
   </div>

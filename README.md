@@ -49,6 +49,7 @@ Material for the site and potential future features.
 
 ### Design
 - https://css-tricks.com
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 - https://feathericons.com/
 - https://tailwindcss.com
 - https://citizennet.github.io

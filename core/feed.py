@@ -4,6 +4,7 @@ from datetime import datetime
 from core import podcasts as pc
 from core.videos import get_videos
 from core.writing import get_medium_posts
+from core.writing import get_old_medium_posts
 
 
 class KIND:
@@ -44,6 +45,7 @@ def recent_items(n=10):
     # We can look into making this async with grequests if this is too slow
     items = from_podcast(pc.get_last_n_items(pc.TTM_FEED, 10))
     items.extend(from_rss(get_medium_posts()))
+    items.extend(from_rss(get_old_medium_posts()))
     items.extend(from_video(get_videos()))
 
     items = sorted(items, key=lambda x: x.publish_date, reverse=True)
