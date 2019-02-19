@@ -1,27 +1,38 @@
-Beau Lyddon
-https://github.com/lyddonb/
-lyddonb@gmail.com
-https://github.com/beaulyddon-wf
-    
+﻿Beau Lyddon
+	https://www.beaulyddon.com/
+	lyddonb@gmail.com
+	https://github.com/lyddonb/
+https://www.linkedin.com/in/beau-lyddon
+	
 
-I am an experienced software engineer, architect, and development manager. I believe in shipping solutions built with good design fundamentals early to accelerate learning and reduce engineering time. I have experience in designing maintainable service-based software platforms. I believe understanding problems from the business and customer perspective is crucial to developing high-value solutions for consumers.
+	
+
+	I am engineering leader that loves to help mentor and build teams. I believe in promoting a customer-centric culture and focus on teaching teams on how to scale their systems and organizations. I mentor folks to work collaboratively to communicate and coordinate effectively within an organization.
 
 
-Experience ------------------------------------------------------------------
+Experience
 CO-FOUNDER AND MANAGING PARTNER, Real Kinetic, Dec 2016 to Jan 2019
 Mentored clients to help enable their technical teams to grow and build high-quality software. We used a holistic, team-based approach to accelerate delivery, but in a way that makes execution more sustainable long-term. This includes working through deep technical problems—such as cloud architecture, performance, and scalability—as well as organizational processes and leadership mentoring.
 
 
-|Projects|
-We had multiple projects focused on helping clients develop new or migrate existing systems to cloud environments. We provided guidance, training, and hands on support of many cloud based services.
+Engagements included a focus on building great engineering organizations. We helped with many different aspects, including:
+* Organizational Structure
+* Product ownership
+* Leadership and mentorship
+* Cross Team Coordination
+* Company Alignment and communication (with a focus on OKRs)
+* Hiring and employee development
+
+
+Focused on helping clients develop new or migrate existing systems to cloud environments. We provided guidance, training, and hands-on support of many cloud-based services.
 * Runtime systems: Kubernetes, Cloud Functions, and Google App Engine
 * Data storage: RDS, CloudSQL, CloudDatastore, BigQuery, S3
 * Data processing: Dataflow, Cloud Pub/Sub, SQS, Kinesis
-* Architectural guidance focused on fault tolerance and scalability 
+* Architectural guidance focused on fault tolerance and scalability
 * Multi-tenancy support and the impact on the infrastructure as well as services such as authentication and authorization.
 
 
-These engagements also involved a transition to a DevOps culture. Focusing on continuous delivery and solving infrastructure needs via products and code verse manual processes.
+Helped clients transition to a DevOps culture. Focusing on continuous delivery and solving infrastructure needs via products and code verse manual processes.
 * Help teams understand their security and compliance needs
 * Automating processes into their CI/CD pipeline
 * Provide support of zero downtime deploys
@@ -29,50 +40,30 @@ These engagements also involved a transition to a DevOps culture. Focusing on co
 
 
 SENIOR DIRECTOR OF ARCHITECTURE, Workiva, Jan 2011 to March 2017
-Lead a group of teams to develop Workiva’s collaboration and data platform.
-Collaborate with teams to help architect, engineer and deliver systems and services.
-Work with Development and Product Managers to drive requirements and set goals via OKRs.
+Lead a group of architects and teams to develop Workiva’s collaboration and data platform.
+Collaborated with leaders and teams to help architect, engineer, and deliver systems and services.
+Worked with Engineering and Product Managers to drive requirements and set goals via OKRs
 
 
-|Projects|
-Microservice Based Architecture
-Lead a group of architects and engineers to design and build a new microservice based platform to support Workiva’s next generation of products and services. Main area of focus has been the Data Platform.
+Projects and Initiatives
+Developer Lifecycle
+Worked with other leaders and the engineering teams to transition from quarterly releases to teams having the ability to release multiple times a day. We leveraged agile, a product mindset, and a DevOps driven culture where processes were automated around the developer lifecycle to allow full team ownership. We built a CI/CD pipeline with compliance checks and security reviews built in as customer data privacy and protection was a top priority.
 
 
-Systems include:
-* Platform wide message bus including pub/sub support
-* Durable event stream built on top of AWS Kinesis
-* Table based calculation engine
-* Graph/Relationship database with ACID Properties 
-* Platform wide code and integration tracing system
+Microservice Based Platform
+Lead a group of architects and engineering teams to design and build a new microservice based platform to support Workiva’s next generation of products and services. The systems included: Platform wide message bus including pub/sub support, durable event streams built on top of AWS Kinesis, table-based calculation engine, and a platform-wide integrated tracing system
 
 
 Calculation Service (https://www.google.com/patents/US20150026230)
-Created a distributed, graph based process for calculating user created formulas. Developed with Python on top of Google App Engine. Leverages GAE task queues, memcache and datastore. Algorithm is built around idempotent tasks, message passing and an adjacency list for tracking status. Built an async workflow library for managing the process on task queues (https://github.com/workiva/furious). Also created a profiling tool for visualizing task based processes (https://github.com/lyddonb/trajectory) and a library for triggering latency spikes and failure in tasks.
+Created a distributed, graph-based service for calculating user-created formulas. This included hiring and mentoring a team to continue the development and maintenance of the service. This was developed with Python on top of Google App Engine. The algorithm is built around idempotent tasks, message passing and an adjacency list for tracking status. We built an async workflow library for managing the process on task queues (https://github.com/workiva/furious). I also created a profiling tool for visualizing calculations and a chaos library for triggering latency spikes and failures on Google App Engine.
 
 
 Prior Experience
-SOFTWARE ENGINEER, Quality Attributes Software (QAS), April 2009 to Dec 2011
-SOFTWARE ENGINEER/ARCHITECT, EFCO Corp, 2004 to March 2009
-SOFTWARE DEVELOPER / FREELANCER, Self Employed, 2000 to 2009
+* SOFTWARE ENGINEER, Quality Attributes Software, April 2009 to Dec 2011
+* SOFTWARE ENGINEER/ARCHITECT, EFCO Corp, 2004 to March 2009
+* SOFTWARE DEVELOPER / FREELANCER, Self Employed, 2000 to 2009
 
 
-Education ------------------------------------------------------------------
+Education
 IOWA STATE UNIVERSITY
 Bachelor of Science, Management Information Systems, 2003
-
-
-Skills ---------------------------------------------------------------------
-Languages
-Experienced: Python, Elm, Go, Javascript, C#, CSS, HTML, Purescript, Ruby, PHP
-Experimented: Rust, C, C++, Clojure, ClojureScipt, Haskell, Erlang, Dart, Idris
-
-
-Systems
-Experienced: Google Cloud Platform, AWS
-Experimented: StatsD, Graphite, RabbitMQ, Kafka
-
-
-Storage
-Experienced: Google Datastore, RDS, BigQuery, MySQL, SQL Server, Memcache, Redis, Google File Storage
-Experimented: Postgres, MongoDB, Cassandra, Riak, Google Cloud Spanner
